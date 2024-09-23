@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Texto y Código Morse</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 50px;
+            background-color: #e1bee7; /* Fondo lila */
+        }
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border: 5px solid #7b1fa2; /* Borde morado */
+            border-radius: 10px; /* Esquinas redondeadas para un mejor aspecto */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        }
+        .morse-output {
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Conversor de Texto a Código Morse</h1>
+        <form id="morseForm" class="mb-3">
+            <div class="form-group mb-3">
+                <label for="inputText">Ingrese texto o código Morse:</label>
+                <textarea class="form-control" id="inputText" rows="4" placeholder="Escriba aquí..." required></textarea>
+                <div class="invalid-feedback">Por favor ingrese un texto válido.</div>
+            </div>
+            <div class="d-grid gap-2 mb-3">
+                <button type="button" class="btn btn-primary" id="toMorseBtn">Convertir a Morse</button>
+                <button type="button" class="btn btn-secondary" id="toTextBtn">Convertir a Texto</button>
+            </div>
+            <div id="alert" class="alert alert-danger d-none" role="alert">
+                Entrada inválida. Solo se permiten letras y números para la conversión a Morse.
+            </div>
+        </form>
+
+        <h3 class="text-center">Resultado:</h3>
+        <div class="morse-output text-center">
+            <pre id="outputText"></pre>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Enlace al archivo JavaScript -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
