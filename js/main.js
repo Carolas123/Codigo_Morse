@@ -30,7 +30,7 @@ function convertMorseToText(morse) {
 
 function validateInput(text) {
     // Permitimos letras, números y los caracteres que estén en morseCode
-    const regex = /^[a-zA-Z0-9 @&!?,./()'"-_$]*$/;
+    const regex = /^[a-zA-Z0-9]*$/;
     return regex.test(text);
 }
 
